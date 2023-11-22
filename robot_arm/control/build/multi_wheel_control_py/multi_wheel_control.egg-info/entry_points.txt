@@ -1,0 +1,3 @@
+[console_scripts]
+multi_motor_controller = multi_wheel_control_py.multi_wheel_control_drive:main
+

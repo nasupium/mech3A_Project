@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>multi_wheel_control_py</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="hr28jwicpq302g@gmail.com">hirai</maintainer>
+  <license>TODO: License declaration</license>
+
+  <depend>rclpy</depend>
+  <depend>example_interfaces</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>ros2_control</build_depend>
+  <exec_depend>ros2_control</exec_depend>
+  <exec_depend>ros2launch</exec_depend> 
+  <exec_depend>urdf_launch</exec_depend>
+  <export>
+    <build_type>ament_python</build_type>
+    <gazebo_ros gazebo_media_path="${prefix}/worlds"/>
+    <gazebo_ros gazebo_model_path="${prefix}/../src/multi_wheel_control_py/urdf"/>
+  </export>
+</package>
