@@ -1,0 +1,3 @@
+[submodule "robot_arm/control/src/gz_ros2_control"]
+	path = robot_arm/control/src/gz_ros2_control
+	url = https://github.com/ros-controls/gz_ros2_control.git
