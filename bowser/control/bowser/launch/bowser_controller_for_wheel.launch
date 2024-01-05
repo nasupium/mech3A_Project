@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="urdf_path" default="$(find bowser)/urdf/bowser.urdf" />
+  <arg name="servo_config_path" default="$(find bowser)/config/bowser_servo_config.yaml" />
+  <rosparam command="load" file="$(find bowser)/config/bowser_diff_drive_controller.yaml" />
+
+  <include file="$(find kxr_controller)/launch/kxr_controller.launch" >
+    <arg name="urdf_path" value="$(arg urdf_path)" />
+    <arg name="servo_config_path" value="$(arg servo_config_path)" />
+  </include>
+
+  <node name="controller_spawner"
+        pkg="controller_manager" type="spawner"
+        respawn="false" output="screen"
+        args="diff_drive_controller" />
+
+</launch>

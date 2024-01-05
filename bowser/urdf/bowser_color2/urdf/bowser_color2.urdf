@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-8-g78fed4e-dirty  Build Version: 1.6.8749.33079
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bowser_color2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0172862370039505 0.0174179252303326 -0.0384256118956641"
+        rpy="0 0 0" />
+      <mass
+        value="1.07571326038376" />
+      <inertia
+        ixx="0.00358832536052535"
+        ixy="-3.6069979534771E-06"
+        ixz="0.000537793556116458"
+        iyy="0.00240474106091266"
+        iyz="-8.01589910879532E-06"
+        izz="0.00194451963723297" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0677738031643562 0.0175 -0.0405824661838448"
+        rpy="3.14159265358979 -2.80808253194293E-17 3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/base_link.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0677738031643562 0.0175 -0.0405824661838448"
+        rpy="3.14159265358979 -2.80808253194293E-17 3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/base_link.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm_link">
+    <inertial>
+      <origin
+        xyz="0.0157358093739623 0.0175000194760971 0.113208576388847"
+        rpy="0 0 0" />
+      <mass
+        value="0.0180689507713013" />
+      <inertia
+        ixx="1.78409410220037E-05"
+        ixy="2.48823987996849E-19"
+        ixz="-1.80531361782165E-06"
+        iyy="5.75874297931831E-06"
+        iyz="-3.90396619803138E-19"
+        izz="2.11230673079077E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0129996537980604 0.0175000097237995 0.111998115072616"
+        rpy="-1.57772181044202E-30 -0.416510507093253 3.40367924817064E-14" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/arm_link.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0129996537980604 0.0175000097237995 0.111998115072616"
+        rpy="-1.57772181044202E-30 -0.416510507093253 3.40367924817064E-14" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/arm_link.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm"
+    type="continuous">
+    <origin
+      xyz="-0.0105742639612754 0 0.0565812178428716"
+      rpy="3.14159265358978 -0.416510507093253 -3.14159265358976" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="left_arm_Link1">
+    <inertial>
+      <origin
+        xyz="-0.0129989001408887 -0.00150141667368093 -0.111996203627668"
+        rpy="0 0 0" />
+      <mass
+        value="0.0627449637811829" />
+      <inertia
+        ixx="1.06688193080984E-05"
+        ixy="1.12806865940117E-08"
+        ixz="1.24972121588296E-08"
+        iyy="1.31408513107132E-05"
+        iyz="-2.91792138942737E-08"
+        izz="1.07080779111111E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0129996379791289 -0.0275000000000007 -0.111998111901088"
+        rpy="-3.14159265358978 0.416510507093285 3.14159265358977" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_arm_Link1.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0129996379791289 -0.0275000000000007 -0.111998111901088"
+        rpy="-3.14159265358978 0.416510507093285 3.14159265358977" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_arm_Link1.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm1"
+    type="continuous">
+    <origin
+      xyz="0 0.0450000097237984 0"
+      rpy="-3.14159265358978 0 3.14159265358979" />
+    <parent
+      link="arm_link" />
+    <child
+      link="left_arm_Link1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_arm_link2">
+    <inertial>
+      <origin
+        xyz="0.0311105194600602 -0.0409969832643134 -0.111341046928644"
+        rpy="0 0 0" />
+      <mass
+        value="0.0307165638813827" />
+      <inertia
+        ixx="6.21583851473038E-06"
+        ixy="-6.15731183185648E-07"
+        ixz="5.90914321441835E-07"
+        iyy="5.57282258465159E-06"
+        iyz="3.27000991004631E-07"
+        izz="5.14887304626213E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0525445270045691 -0.0610599154065441 -0.11199811190109"
+        rpy="3.14159265358979 0.416510507093301 -2.26892802759262" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_arm_link2.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0525445270045691 -0.0610599154065441 -0.11199811190109"
+        rpy="3.14159265358979 0.416510507093301 -2.26892802759262" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_arm_link2.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm2"
+    type="continuous">
+    <origin
+      xyz="0 0.0520000000000006 0"
+      rpy="0 0 -0.872664625997209" />
+    <parent
+      link="left_arm_Link1" />
+    <child
+      link="left_arm_link2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_arm_link3">
+    <inertial>
+      <origin
+        xyz="0.0535032760272925 -0.0803340900186886 -0.123422732139"
+        rpy="0 0 0" />
+      <mass
+        value="0.0461061156498895" />
+      <inertia
+        ixx="1.72773516574559E-05"
+        ixy="-3.11357138503663E-07"
+        ixz="9.90155626694333E-07"
+        iyy="1.32117962385507E-05"
+        iyz="-1.06487130093991E-06"
+        izz="1.35770198199857E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0965348529190694 -0.0621142159478561 -0.1119981119011"
+        rpy="3.14159265358979 0.416510507093469 -1.74532925199433" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_arm_link3.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0965348529190694 -0.0621142159478561 -0.1119981119011"
+        rpy="3.14159265358979 0.416510507093469 -1.74532925199433" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_arm_link3.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm3"
+    type="continuous">
+    <origin
+      xyz="0 0.0410000000000002 0"
+      rpy="0 0 -0.523598775598285" />
+    <parent
+      link="left_arm_link2" />
+    <child
+      link="left_arm_link3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_arm_link1">
+    <inertial>
+      <origin
+        xyz="-0.0129977296218534 0.0365014166718586 -0.111998849514891"
+        rpy="0 0 0" />
+      <mass
+        value="0.0627449637811828" />
+      <inertia
+        ixx="1.07027559542478E-05"
+        ixy="-2.91795285604536E-08"
+        ixz="-1.83518322201907E-08"
+        iyy="1.31408513107132E-05"
+        iyz="-1.12798726282984E-08"
+        izz="1.06741412649616E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0129996379791242 0.0624999999999976 -0.111998111901089"
+        rpy="-3.14159265358979 0.416510507093285 -3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_arm_link1.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0129996379791242 0.0624999999999976 -0.111998111901089"
+        rpy="-3.14159265358979 0.416510507093285 -3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_arm_link1.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm1"
+    type="continuous">
+    <origin
+      xyz="0 -0.0449999902761989 0"
+      rpy="-3.14159265358979 0 -3.14159265358975" />
+    <parent
+      link="arm_link" />
+    <child
+      link="right_arm_link1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="right_arm_link2">
+    <inertial>
+      <origin
+        xyz="0.0578997001814015 0.0635212146371717 -0.111262363645809"
+        rpy="0 0 0" />
+      <mass
+        value="0.0307165634524258" />
+      <inertia
+        ixx="6.21985664659852E-06"
+        ixy="6.56137385732243E-07"
+        ixz="5.87261791566759E-07"
+        iyy="5.57282257105847E-06"
+        iyz="-2.35665652371652E-07"
+        izz="5.1448548775126E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0793560825137277 0.0835574817455804 -0.111998111901085"
+        rpy="3.14159265358979 0.416510507093206 2.26892802759259" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_arm_link2.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0793560825137277 0.0835574817455804 -0.111998111901085"
+        rpy="3.14159265358979 0.416510507093206 2.26892802759259" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_arm_link2.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm2"
+    type="continuous">
+    <origin
+      xyz="0 -0.0520000000000021 0"
+      rpy="0 0 0.872664625997206" />
+    <parent
+      link="right_arm_link1" />
+    <child
+      link="right_arm_link2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_arm_link3">
+    <inertial>
+      <origin
+        xyz="0.0879714647561028 0.0864123042205624 -0.123423028889705"
+        rpy="0 0 0" />
+      <mass
+        value="0.046106923561594" />
+      <inertia
+        ixx="1.72778452324343E-05"
+        ixy="3.11298817607108E-07"
+        ixz="9.90154776697586E-07"
+        iyy="1.32119202927426E-05"
+        iyz="1.06493325333369E-06"
+        izz="1.35774037718248E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.131003124274489 0.0681919021662189 -0.11199811190109"
+        rpy="-3.14159265358975 0.416510507093253 1.74532925199431" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_arm_link3.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.131003124274489 0.0681919021662189 -0.11199811190109"
+        rpy="-3.14159265358975 0.416510507093253 1.74532925199431" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_arm_link3.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm3"
+    type="continuous">
+    <origin
+      xyz="0 -0.0410000000000001 0"
+      rpy="0 0 0.5235987755983" />
+    <parent
+      link="right_arm_link2" />
+    <child
+      link="right_arm_link3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="head_link1">
+    <inertial>
+      <origin
+        xyz="-0.0443253668195235 -0.0180411344768259 0.166095025028365"
+        rpy="0 0 0" />
+      <mass
+        value="0.0349073570659508" />
+      <inertia
+        ixx="2.60861897269992E-05"
+        ixy="3.23097870701072E-11"
+        ixz="-4.6505011442676E-06"
+        iyy="1.14931510127951E-05"
+        iyz="-1.80235890925944E-10"
+        izz="2.38242106545671E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0138318254464297 -0.0174999999999993 0.163972973567231"
+        rpy="-5.58997369476623E-16 -0.558505360638182 -3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/head_link1.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0138318254464297 -0.0174999999999993 0.163972973567231"
+        rpy="-5.58997369476623E-16 -0.558505360638182 -3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/head_link1.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head1"
+    type="continuous">
+    <origin
+      xyz="0.0308486875787339 0 0.0911447511073799"
+      rpy="3.14159265358979 0.558505360638182 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="head_link1" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="head_link2">
+    <inertial>
+      <origin
+        xyz="-0.133552808429979 0.0174768482640115 -0.174909329919878"
+        rpy="0 0 0" />
+      <mass
+        value="0.120523131533843" />
+      <inertia
+        ixx="3.97614066108484E-05"
+        ixy="-2.02710166822076E-09"
+        ixz="-2.02549018711155E-06"
+        iyy="2.78371859371647E-05"
+        iyz="1.37658817040691E-08"
+        izz="5.38536278077465E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.111870472348922 0.0175000000000001 -0.152928419695134"
+        rpy="3.14159265358979 8.5015291933416E-16 3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/head_link2.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.111870472348922 0.0175000000000001 -0.152928419695134"
+        rpy="3.14159265358979 8.5015291933416E-16 3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/head_link2.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head2"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0249999999999996"
+      rpy="-3.14159265358979 0.558505360638181 0" />
+    <parent
+      link="head_link1" />
+    <child
+      link="head_link2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_omni_link">
+    <inertial>
+      <origin
+        xyz="-0.0496363166470292 0.0854999999999993 -0.0550159209504048"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436961708725907" />
+      <inertia
+        ixx="8.26418170156122E-06"
+        ixy="-1.35666142319353E-21"
+        ixz="0"
+        iyy="1.22169503534259E-05"
+        iyz="-1.59157965780092E-21"
+        izz="8.26418170156122E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0496363166470292 0.0854999999999992 -0.0550159209504048"
+        rpy="-3.14159265358979 0.383972435438753 3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_omni_link.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0496363166470292 0.0854999999999992 -0.0550159209504048"
+        rpy="-3.14159265358979 0.383972435438753 3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_omni_link.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_omni"
+    type="continuous">
+    <origin
+      xyz="-0.00114248503819581 -0.0679999999999992 -0.00816668402336392"
+      rpy="0 0.383972435438753 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_omni_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left_omni_link">
+    <inertial>
+      <origin
+        xyz="-0.0496363166470292 -0.0505000000000007 -0.0550159209504048"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436961708725907" />
+      <inertia
+        ixx="8.26418170156122E-06"
+        ixy="-8.67236938537413E-22"
+        ixz="4.2351647362715E-22"
+        iyy="1.22169503534259E-05"
+        iyz="-1.8255628609056E-21"
+        izz="8.26418170156122E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0496363166470292 -0.0505000000000007 -0.0550159209504048"
+        rpy="3.14159265358979 0.383972435438753 3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_omni_link.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0496363166470292 -0.0505000000000007 -0.0550159209504048"
+        rpy="3.14159265358979 0.383972435438753 3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_omni_link.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_omni"
+    type="continuous">
+    <origin
+      xyz="-0.00114248503819585 0.0680000000000007 -0.00816668402336396"
+      rpy="0 0.383972435438753 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_omni_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="center_omni_link">
+    <inertial>
+      <origin
+        xyz="-0.0496363166470319 0.0175 -0.0405159209504036"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436961708725907" />
+      <inertia
+        ixx="8.81887412108495E-06"
+        ixy="-1.83057349763989E-21"
+        ixz="-1.37291191525285E-06"
+        iyy="8.26418170156122E-06"
+        iyz="-1.6685675956406E-21"
+        izz="1.16622579339021E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0496363166470319 0.0175 -0.0405159209504035"
+        rpy="-3.14159265358979 0.383972435438753 -3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/center_omni_link.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0496363166470319 0.0175 -0.0405159209504035"
+        rpy="-3.14159265358979 0.383972435438753 -3.14159265358979" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/center_omni_link.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="center_omni"
+    type="continuous">
+    <origin
+      xyz="-0.00657428064272451 0 -0.0216108499145846"
+      rpy="0 0.383972435438753 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="center_omni_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_leg_link">
+    <inertial>
+      <origin
+        xyz="0.021168889774232 -0.0622954767559031 0.02703553346408"
+        rpy="0 0 0" />
+      <mass
+        value="0.0389714012763401" />
+      <inertia
+        ixx="5.56461883529681E-06"
+        ixy="1.9967389357433E-07"
+        ixz="2.6969372056714E-08"
+        iyy="5.41426279285964E-06"
+        iyz="-4.16843504968471E-08"
+        izz="5.65176552055112E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0155320374883209 -0.0544358117950135 0.00400000000000031"
+        rpy="4.68267558328441E-15 -3.13037374448842E-15 -2.53072741539178" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_leg_link.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0155320374883209 -0.0544358117950135 0.00400000000000031"
+        rpy="4.68267558328441E-15 -3.13037374448842E-15 -2.53072741539178" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_leg_link.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg"
+    type="continuous">
+    <origin
+      xyz="-0.0492738044856277 -0.0360000172262382 -0.0365824661838448"
+      rpy="-3.14159265358979 0 0.61086523819801" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_leg_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_leg_link1">
+    <inertial>
+      <origin
+        xyz="0.00119261564095531 0.0615826350016807 -0.00389045111830998"
+        rpy="0 0 0" />
+      <mass
+        value="0.00661141153462385" />
+      <inertia
+        ixx="1.74056775824803E-06"
+        ixy="8.45524886734918E-07"
+        ixz="-4.36270188277786E-07"
+        iyy="1.12507597604239E-06"
+        iyz="-6.23058399789935E-07"
+        izz="1.80949469837897E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0155320265254325 0.080142731906048 -0.0125451664565899"
+        rpy="-2.77671934805724 0.244842862155154 2.5761172062619" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_leg_link1.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0155320265254325 0.080142731906048 -0.0125451664565899"
+        rpy="-2.77671934805724 0.244842862155154 2.5761172062619" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_leg_link1.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg1"
+    type="continuous">
+    <origin
+      xyz="0 0.0234999866469598 0.0265000000000077"
+      rpy="-2.7052603405912 0 0" />
+    <parent
+      link="right_leg_link" />
+    <child
+      link="right_leg_link1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_leg_link2">
+    <inertial>
+      <origin
+        xyz="-0.0886805624905479 0.0925862028743041 -0.0613699873554441"
+        rpy="0 0 0" />
+      <mass
+        value="0.0523990895017907" />
+      <inertia
+        ixx="8.92177921580869E-06"
+        ixy="5.42801899274871E-07"
+        ixz="6.68364367893432E-07"
+        iyy="8.50846128902019E-06"
+        iyz="1.00944033325595E-06"
+        izz="9.13260129735794E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0724940125970381 0.0794614895134548 -0.0759357987991357"
+        rpy="-2.27806788622044 0.489116666389122 -2.63901107573773" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_leg_link2.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0724940125970381 0.0794614895134548 -0.0759357987991357"
+        rpy="-2.27806788622044 0.489116666389122 -2.63901107573773" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_leg_link2.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg2"
+    type="continuous">
+    <origin
+      xyz="0 -0.05 0"
+      rpy="0.35073311631599 0.397153166773405 -0.813206081693525" />
+    <parent
+      link="right_leg_link1" />
+    <child
+      link="right_leg_link2" />
+    <axis
+      xyz="0.633687274224632 0.773589321594963 0" />
+  </joint>
+  <link
+    name="right_leg_link3">
+    <inertial>
+      <origin
+        xyz="0.01264017123677 0.077365387450625 0.0882271591296754"
+        rpy="0 0 0" />
+      <mass
+        value="0.0250670092053946" />
+      <inertia
+        ixx="8.80338443793237E-06"
+        ixy="3.11783297348185E-07"
+        ixz="8.19461019404313E-08"
+        iyy="8.57882794160368E-06"
+        iyz="1.10974827754171E-07"
+        izz="1.57008915580819E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0155320265254159 0.0814744335350602 0.0728833113409256"
+        rpy="-3.14159265358979 3.08780254995788E-16 2.53072741539178" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_leg_link3.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0155320265254159 0.0814744335350602 0.0728833113409256"
+        rpy="-3.14159265358979 3.08780254995788E-16 2.53072741539178" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/right_leg_link3.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg3"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0509999999999931"
+      rpy="-0.959931088596903 0 0.88448591713094" />
+    <parent
+      link="right_leg_link2" />
+    <child
+      link="right_leg_link3" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="left_leg_link">
+    <inertial>
+      <origin
+        xyz="0.000914602095279862 0.0337505664283214 0.0270355333889504"
+        rpy="0 0 0" />
+      <mass
+        value="0.0389714013100235" />
+      <inertia
+        ixx="5.56019900614236E-06"
+        ixy="-2.01282579905886E-07"
+        ixz="-4.83945261831145E-08"
+        iyy="5.41868260081158E-06"
+        iyz="-1.10860588051932E-08"
+        izz="5.65176552704426E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.00454314865356559 0.0257654769359373 0.00399999999999986"
+        rpy="7.04429966175573E-15 5.87160346137124E-17 2.53072741539178" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_leg_link.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.00454314865356559 0.0257654769359373 0.00399999999999986"
+        rpy="7.04429966175573E-15 5.87160346137124E-17 2.53072741539178" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_leg_link.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg"
+    type="continuous">
+    <origin
+      xyz="-0.0492738032154793 0.0360000000896287 -0.0365824661838448"
+      rpy="-3.14159265358979 0 -0.61086523819801" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_leg_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left_leg_link1">
+    <inertial>
+      <origin
+        xyz="0.018882559624293 -0.0355984992147975 -0.00822615048327825"
+        rpy="0 0 0" />
+      <mass
+        value="0.00661141153462385" />
+      <inertia
+        ixx="1.74056775824802E-06"
+        ixy="-8.4552488673494E-07"
+        ixz="-4.36270188277762E-07"
+        iyy="1.12507597604235E-06"
+        iyz="6.23058399789902E-07"
+        izz="1.80949469837902E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.00454314874685075 -0.0541585962283513 0.000428564999422994"
+        rpy="-0.364873305532512 -0.244842862155159 -0.565475447327903" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_leg_link1.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.00454314874685075 -0.0541585962283513 0.000428564999422994"
+        rpy="-0.364873305532512 -0.244842862155159 -0.565475447327903" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_leg_link1.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg1"
+    type="continuous">
+    <origin
+      xyz="0 -0.0234999999558904 0.0265000000001133"
+      rpy="0.436332312998574 0 -3.14159265358978" />
+    <parent
+      link="left_leg_link" />
+    <child
+      link="left_leg_link1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="left_leg_link2">
+    <inertial>
+      <origin
+        xyz="-0.088652364230584 -0.0666180206402422 -0.0378376493623788"
+        rpy="0 0 0" />
+      <mass
+        value="0.0523990894756317" />
+      <inertia
+        ixx="8.90571663540611E-06"
+        ixy="-5.48648198232392E-07"
+        ixz="7.19969555042885E-07"
+        iyy="8.5245238652129E-06"
+        iyz="-9.73305992073948E-07"
+        izz="9.13260129674983E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.0724940125970807 -0.0535108013229157 -0.0524504462908491"
+        rpy="2.27806788622048 0.489116666389108 2.63901107573777" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_leg_link2.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.0724940125970807 -0.0535108013229157 -0.0524504462908491"
+        rpy="2.27806788622048 0.489116666389108 2.63901107573777" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_leg_link2.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg2"
+    type="continuous">
+    <origin
+      xyz="0 0.05 0"
+      rpy="2.79085953727377 -0.397153166773378 2.3283865718963" />
+    <parent
+      link="left_leg_link1" />
+    <child
+      link="left_leg_link2" />
+    <axis
+      xyz="0.63368727422467 -0.773589321594932 0" />
+  </joint>
+  <link
+    name="left_leg_link3">
+    <inertial>
+      <origin
+        xyz="-0.00741531246489344 -0.0486812809854478 0.0882271586163737"
+        rpy="0 0 0" />
+      <mass
+        value="0.025067005596267" />
+      <inertia
+        ixx="8.80550609863053E-06"
+        ixy="-3.11010350934721E-07"
+        ixz="7.62551162069566E-08"
+        iyy="8.57670444536618E-06"
+        iyz="-1.1495982502336E-07"
+        izz="1.57008897749435E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.00454314874685681 -0.0528041119849176 0.0728833113409351"
+        rpy="-3.14159265358978 2.37065177247415E-14 -2.53072741539179" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_leg_link3.3dxml" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.8 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.00454314874685681 -0.0528041119849176 0.0728833113409351"
+        rpy="-3.14159265358978 2.37065177247415E-14 -2.53072741539179" />
+      <geometry>
+        <mesh
+          filename="package://bowser_color2/meshes/left_leg_link3.3dxml" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg3"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0509999999999373"
+      rpy="0.959931088596871 0 -0.884485917130886" />
+    <parent
+      link="left_leg_link2" />
+    <child
+      link="left_leg_link3" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+</robot>

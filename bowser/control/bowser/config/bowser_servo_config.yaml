@@ -1,0 +1,22 @@
+joint_name_to_servo_id: {
+ 'arm': 6,
+ 'left_arm1': 14,
+ 'left_arm2': 16,
+ 'left_arm3': 18,
+ 'right_arm1': 5,
+ 'right_arm2': 7,
+ 'right_arm3': 9,
+ 'head1': 8,
+ 'head2': 10,
+ 'right_omni': 3,
+ 'left_omni': 12,
+ 'center_omni': 4,
+ 'right_leg': 2,
+ 'right_leg1': 11,
+ 'right_leg2': 13,
+ 'right_leg3': 15,
+ 'left_leg': 2,
+ 'left_leg1': 20,
+ 'left_leg2': 22,
+ 'left_leg3': 24
+} 
